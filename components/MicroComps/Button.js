@@ -4,7 +4,7 @@ import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
 export default Button = (props) => {
     return (
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => props.toggleModal(props.connectedModal)}>
             <Text style={{color: 'white', textAlign: 'center'}}>{props.text}</Text>
         </TouchableOpacity>
     );
